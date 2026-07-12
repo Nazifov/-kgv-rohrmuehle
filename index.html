@@ -2091,9 +2091,30 @@ body.lightbox-open { overflow: hidden; }
   .gallery-small { grid-column: span 4; }
 }
 @media (max-width: 620px) {
-  .gallery-grid { margin-top: 44px; gap: 12px; grid-template-columns: 1fr; grid-auto-rows: 245px; }
-  .gallery-item, .gallery-large, .gallery-tall, .gallery-wide, .gallery-small { grid-column: auto; grid-row: auto; }
-  .gallery-tall { min-height: 370px; }
+  .gallery-grid {
+    margin-top: 44px;
+    gap: 12px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+
+  .gallery-item,
+  .gallery-large,
+  .gallery-tall,
+  .gallery-wide,
+  .gallery-small {
+    grid-column: auto;
+    grid-row: auto;
+    width: 100%;
+    height: 255px;
+    min-height: 0;
+  }
+
+  .gallery-large { height: 330px; }
+  .gallery-tall { height: 390px; }
+  .gallery-wide { height: 265px; }
+  .gallery-small { height: 245px; }
+
   .gallery-item span { right: 18px; bottom: 17px; left: 18px; }
   .lightbox { padding-inline: 12px; }
   .lightbox-close { right: 14px; }
